@@ -5,8 +5,31 @@ from cryptography.fernet import Fernet
 from PyQt5 import QtCore, QtGui, QtWidgets
 from des import *
 from des1 import *
+import rsa
 
-with open('Key.key','rb') as f:
+def generate_keys():
+    (pubKey, privKey) = rsa.newkeys(1024)
+    with open('key/pubKey.pem', "wb") as f:
+        f.write(pubKey.save_pkcs1("PEM"))
+
+    with open('key/privKey.pem', "wb") as f:
+        f.write(privKey.save_pkcs1("PEM"))
+
+def load_keys():
+    with open('key/pubKey.pem', "rb") as f:
+        pubKey = rsa.PublicKey.load_pkcs1(f.read())
+
+    with open('key/privKey.pem', "rb") as f:
+        privKey = rsa.PrivateKey.load_pkcs1(f.read())
+
+    return pubKey, privKey
+generate_keys()
+(pubKey,privKey) = load_keys()
+
+
+
+
+with open('key/key.key','rb') as f:
     key = f.read()
 
 fernet = Fernet(key)
@@ -35,7 +58,18 @@ def startclient():
         MainForm.ui.label.setText("Server conectied")
     data = b""
     payload_size = struct.calcsize("Q")
+
+    f = open("key/pubKey.pem", "rb")
+    l = f.read(1024)
+    client_socket.sendall(l)
+    data = client_socket.recv(2048)
+    xl = rsa.decrypt(data, privKey)
+    message = open('key/key.key', "wb")
+    message.write(xl)
+    message = open('key/key.key', "rb")
+
     while True:
+
         while len(data) < payload_size:
             packet = client_socket.recv(4096)  # 4KB
             if not packet: break

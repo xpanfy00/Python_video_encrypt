@@ -1,5 +1,6 @@
 import socket,cv2, pickle,struct,imutils
 from cryptography.fernet import Fernet
+import rsa
 
 #генерирует ключ и сохраните в файле
 key = Fernet.generate_key()#сгенерировать 256-битный ключ
@@ -25,12 +26,26 @@ server_socket.bind(socket_address)
 server_socket.listen(5)
 print("LISTENING AT:",socket_address)
 
+
+
 # Socket Accept
 while True:
 	client_socket,addr = server_socket.accept()
 	print('GOT CONNECTION FROM:',addr)
+	f = open("pub_client_key.pem", "wb")
+	data = client_socket.recv(1024)
+	f.write(data)
+	f = open("pub_client_key.pem", "rb")
+	pubKey = rsa.PublicKey.load_pkcs1(f.read())
+	message = open('key.key', "rb")
+	text = message.read()
+	data = rsa.encrypt(text, pubKey)
+	client_socket.sendall(data)
+
+
+
 	if client_socket:
-		vid = cv2.VideoCapture("movie.Mjpeg")
+		vid = cv2.VideoCapture(0)
 		
 		while(vid.isOpened()):
 			img,frame = vid.read()
