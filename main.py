@@ -29,10 +29,7 @@ generate_keys()
 
 
 
-with open('key/key.key','rb') as f:
-    key = f.read()
 
-fernet = Fernet(key)
 
 class MainForm(QtWidgets.QWidget):
     def __init__(self, parent=None):
@@ -50,6 +47,7 @@ class LoginForm(QtWidgets.QWidget):
         self.ui.setupUi(self)
 
 def startclient():
+
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     host_ip = MainForm.ui.lineEdit.text()
     port = 9999
@@ -62,11 +60,17 @@ def startclient():
     f = open("key/pubKey.pem", "rb")
     l = f.read(1024)
     client_socket.sendall(l)
-    data = client_socket.recv(2048)
-    xl = rsa.decrypt(data, privKey)
+    data_key = client_socket.recv(2048)
+    xl = rsa.decrypt(data_key, privKey)
     message = open('key/key.key', "wb")
     message.write(xl)
-    message = open('key/key.key', "rb")
+    message.close()
+    f.close()
+
+    with open('key/key.key', 'rb') as f:
+        key = f.read()
+
+    fernet = Fernet(key)
 
     while True:
 

@@ -41,6 +41,8 @@ while True:
 	text = message.read()
 	data = rsa.encrypt(text, pubKey)
 	client_socket.sendall(data)
+	f.close()
+	message.close()
 
 
 

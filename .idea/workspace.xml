@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2b4186a9-9b32-4dd2-9c1b-4eed1a3b4a84" name="Changes" comment="New Client server broadcast video encrypter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Key.key" beforeDir="false" afterPath="$PROJECT_DIR$/Key.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/key/key.key" beforeDir="false" afterPath="$PROJECT_DIR$/key/key.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/key/privKey.pem" beforeDir="false" afterPath="$PROJECT_DIR$/key/privKey.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/key/pubKey.pem" beforeDir="false" afterPath="$PROJECT_DIR$/key/pubKey.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pub_client_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/pub_client_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverdup.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverdup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +176,8 @@
       <workItem from="1638299414910" duration="1699000" />
       <workItem from="1638301126414" duration="2335000" />
       <workItem from="1638801781580" duration="5768000" />
+      <workItem from="1639041033697" duration="960000" />
+      <workItem from="1639048184545" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="New Client server broadcast video encrypter">
       <created>1638301655784</created>
@@ -184,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638813996085</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New Client server broadcast video encrypter">
+      <created>1639041363249</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639041363249</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +228,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>107</line>
+          <line>108</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -220,8 +236,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject1$Server.coverage" NAME="Server Coverage Results" MODIFIED="1638283260472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject1$serverdup.coverage" NAME="serverdup Coverage Results" MODIFIED="1638813380711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonProject1$main.coverage" NAME="main Coverage Results" MODIFIED="1638813384042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject1$serverdup.coverage" NAME="serverdup Coverage Results" MODIFIED="1639048823876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonProject1$main.coverage" NAME="main Coverage Results" MODIFIED="1639048827338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject1$Client.coverage" NAME="Client Coverage Results" MODIFIED="1638283262059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject1$clientdup.coverage" NAME="clientdup Coverage Results" MODIFIED="1638299024923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
