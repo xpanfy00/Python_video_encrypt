@@ -78,9 +78,9 @@ def startclient():
         data = data[payload_size:]
         msg_size = struct.unpack("Q", packed_msg_size)[0]
         while len(data) < msg_size:
-            data += client_socket.recv(4096)  # получение зашифрованных данных от клиента
-        frame_data = data[:msg_size]  # разбиение данных на сегменты равного размера
-        frame_data = fernet.decrypt(frame_data)  # расшифровка полученных данных
+            data += client_socket.recv(4096)  # příjem šifrovaných dat od klienta
+        frame_data = data[:msg_size]  # rozdělení dat do segmentů stejné velikosti
+        frame_data = fernet.decrypt(frame_data)  # dešifrování přijatých dat
         data = data[msg_size:]
         frame = pickle.loads(frame_data)
         cv2.imshow("RECEIVING VIDEO", frame)

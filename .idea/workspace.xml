@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b4186a9-9b32-4dd2-9c1b-4eed1a3b4a84" name="Changes" comment="New Client server broadcast video encrypter">
-      <change afterPath="$PROJECT_DIR$/key/key.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/key/privKey.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/key/pubKey.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pub_client_key.pem" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Key.key" beforeDir="false" afterPath="$PROJECT_DIR$/Key.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverdup.py" beforeDir="false" afterPath="$PROJECT_DIR$/serverdup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +168,7 @@
       <workItem from="1638298701773" duration="707000" />
       <workItem from="1638299414910" duration="1699000" />
       <workItem from="1638301126414" duration="2335000" />
-      <workItem from="1638801781580" duration="4388000" />
+      <workItem from="1638801781580" duration="5768000" />
     </task>
     <task id="LOCAL-00001" summary="New Client server broadcast video encrypter">
       <created>1638301655784</created>
@@ -185,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638301655784</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New Client server broadcast video encrypter">
+      <created>1638813996085</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638813996085</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +212,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>110</line>
+          <line>107</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
